@@ -37,7 +37,7 @@ nav .nav{
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #41b4f2;
+    color: #28b0fa;
     transition: all 0.5;
 }
 .nav-active{
@@ -46,12 +46,12 @@ nav .nav{
 .nav .nav_item:last-child.nav-active {
     background-color: transparent;
 }
+.nav .nav_item:last-child{
+    font-size: 2rem;
+}
 .nav .nav_item:last-child i{
-    width: 100%;
-    height: 100%;
     font-size: 2rem ;
     color: #0088ff;
-    z-index: 0;
 }
 .quantity{
     position: absolute;
