@@ -15,3 +15,11 @@ navTabs.forEach(item => {
         }
     })
 })
+let toTop = document.querySelector('.to_top')
+document.addEventListener('scroll', (event) => {
+    if (window.scrollY > 300){
+        toTop.style.opacity = 1;
+    }else{
+        toTop.style.opacity = 0;
+    }
+})
