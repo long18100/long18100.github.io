@@ -1,4 +1,6 @@
 let  navTabs = document.querySelectorAll('body');
+let reload = document.querySelector('html');
+
 navTabs.forEach(item => {
     item.addEventListener('click', function(event){
         if(event.target.classList.contains('nav_item')){
@@ -12,6 +14,9 @@ navTabs.forEach(item => {
             let newContentActive = document.getElementById(newActive.dataset.target);
             lastContentActive.classList.remove('active');
             newContentActive.classList.add('active');
+            toTop.click();
+            reload.style.scrollBehavior = "auto";
+            reload.style.scrollBehavior = "smooth";
         }
     })
 })
