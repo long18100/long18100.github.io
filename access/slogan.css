@@ -1,0 +1,47 @@
+#box-slogan{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--main-color) ,var(--white-color));
+}
+.slogan{
+    width: 60%;
+    /* margin-top: 50px; */
+}
+.slogan span{
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--white-color);
+}
+.slogan h1{
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--white-color);
+    mix-blend-mode: multiply;
+    background-color: var(--main-color);
+    clip-path: polygon(100% 0, 95% 48%, 100% 99%, 0% 100%, 5% 51%, 0% 0%);
+}
+.go-to-summer-shop{
+    padding: 5px 15px;
+    height: 40px;
+    background-image: linear-gradient( 45deg ,#D000F7, #24BAE3 );
+    border-radius: 20px;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin-top: 20px;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+.model-layer{
+    position: absolute;
+    /* margin-top: 50px; */
+    left: 0;
+    filter: drop-shadow(5px 40px 10px #05025189);
+    z-index: -1;
+}
+.model-layer img{
+    filter: saturate(1.5);
+    z-index: -1;
+}

@@ -1,0 +1,34 @@
+.quick-menu{
+    width: 90%;
+    height: 210px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    transition: all 1s;
+    margin-bottom: 30px;
+}
+.quick-menu:hover{
+    height: 400px;
+}
+.item-quick-menu{
+    width: 24%;
+    text-align: center;
+}
+.item-quick-menu h1{
+    font-size: 1.6rem;
+}
+.item-quick-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+.item-quick-menu ul li{
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+.item-quick-menu ul li a{
+    color: rgb(37, 36, 36);
+}
+.item-quick-menu ul li a:hover{
+    color: rgba(37, 36, 36, 0.638);
+}

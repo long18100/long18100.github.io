@@ -1,0 +1,102 @@
+#customer-review{
+    background-color: rgb(0, 0, 0);
+    padding: 80px 0 0 0;
+}
+.slider-customer{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: black;
+    margin: auto;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    background: #000000;
+}
+.list-customer{
+    position: absolute;
+    height: 100%;
+    width: max-content;
+    display: flex;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+.item-customer{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+.item-customer .infor-customer{
+    width: 35%;
+    font-size: 2.5rem;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.item-customer .infor-customer h1{
+    text-align: start;
+    width: 80%;
+}
+.item-customer .img-customer{
+    width: 65%;
+    height: 100%;
+    -webkit-mask-image: url(/images/layers/layer_mask-1.png);
+    -webkit-mask-size:100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+.item-customer .img-customer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.directional-customer{
+    width: 98%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.directional-customer button{
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.189);
+    border-radius: 50%;
+    border: 2px solid var(--white-color);
+}
+.dot{
+    /* width: 200px; */
+    list-style: none;
+    position: absolute;
+    left: var(--distance);
+    bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.dot li{
+    height: 40px;
+    border-radius:10px ;
+    transition: 0.5s;
+    text-align: center;
+}
+li.dot-active{
+    height: 55px;
+}
+.dot-item img{
+    height: 100%;
+    display: flex;
+    align-items: end;
+    /* object-fit: cover; */
+    margin-left: 10px;
+}
+.container{
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+}

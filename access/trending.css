@@ -1,0 +1,191 @@
+#box-trending{
+    height: 70vh;
+    background-color: rgb(0, 26, 98);
+}
+.trending{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.trending .box-description-trending{
+    width: calc(50% - 50px);
+    margin-left: 50px;
+    display: flex;
+    align-items: end;
+}
+.box-description-trending .description-trending{
+    width: 70%;
+    height: 70%;
+    flex-direction: column;
+}
+.box-description-trending .description-trending span{
+    color: var(--white-color-rgba);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+}
+.box-description-trending .description-trending h1{
+    color: var(--white-color);
+    font-size: 5rem;
+    font-weight: 1000;
+}
+
+.box-description-trending .description-trending button{
+    width: 100px;
+    height: 40px;
+    background-color: var(--white-color);
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-radius: 20px;
+}
+.trending .img-trending{
+    width: 50%;
+}
+.img-trending img:nth-child(1){
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 6px solid var(--white-color);
+    transform: translate(-150%, -50%) skew(-15deg);
+    object-fit: cover;
+
+}
+.img-trending img{
+    
+    height: 100%;
+    filter: drop-shadow(10px 10px 10px rgba(122, 122, 255, 0.637)) saturate(1.5);
+}
+
+
+.introduce-new-product{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.new-product-item{
+    width: 49%;
+    height: 500px;
+    background: url(/images/products/NewProduct-1.avif) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+.new-product-item:nth-child(2){
+    background: url(/images/products/NewProduct-2.jpg) no-repeat center;
+    background-size: cover;
+    color: var(--black-color);
+}
+.new-product-item .slogan-new-product{
+    width: 40%;
+    height: 40%;
+    flex-direction: column;
+    color: var(--white-color);
+    transition: all .5s;
+}
+.slogan-new-product span{
+    font-size: 1.8rem;
+}
+.slogan-new-product h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.new-product-item .slogan-new-product button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+.new-product-item:last-child .slogan-new-product button{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.new-product-item .slogan-new-product button:hover{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.new-product-item:last-child .slogan-new-product button:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+
+
+
+
+.new-arrivals{
+    width: 100%;
+    height: 230px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.338);
+}
+.heading-arrivals{
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+.heading-arrivals img{
+    width: 100px;
+    transform: translateX(10px);
+}
+.heading-arrivals h1{
+    font-size: 3rem;
+    font-weight: 1000;
+}
+.image-arrivals{
+    width: 40%;
+}
+.image-arrivals img{
+    width: 30%;
+    transform: rotate(-45deg);
+    filter: drop-shadow(10px 10px 10px #00025e89);
+}
+.new-arrivals_shop{
+    width: 30%;
+    height: 100%;
+}
+.new-arrivals_shop button{
+    width: 130px;
+    height: 40px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+
+
+
+.box-type-shoes{
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+}
+.box-type-shoes h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 40px;
+    margin-left: 20px;
+}
+.box-type-shoes .type-shoes{
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    justify-content: space-evenly;
+}
+.type-shoes .item_type-shoes{
+    width: 49%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.type-shoes .item_type-shoes img:hover{
+    transform: scale(1.1)
+}
+.type-shoes .item_type-shoes img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
