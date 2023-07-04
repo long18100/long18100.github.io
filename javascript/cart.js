@@ -468,7 +468,6 @@ function reloadCard(key){
             newDiv.classList.add('item-product-cart');
             newDiv.setAttribute('data-key', key);
             newDiv.innerHTML = `
-                <input class="check-quantity" type="checkbox" name="" id="">
                 <div><img src="${value.image}"/></div>
                 <h1>${value.name}</h1>
                 <div class="box-changeQuantity">
