@@ -86,3 +86,110 @@
     color: var(--main-color);
     border-radius: 5px;
 }
+
+.box-payment{
+    position: absolute;
+    inset: 0 0 auto 0 ;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    z-index: 999999999;
+}
+.header-payment{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.heading-pay{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+.heading-pay img{
+    width: 100px;
+}
+.back{
+    background-color: transparent;
+    color: var(--black-color);
+    font-size: 2.5rem;
+}
+.box-payment .address{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding-left: 10px;
+}
+.payment-list{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+.item-product-payment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    background-color: #f6f6f6;
+}
+.item-product-payment h1{
+    width: 250px;
+}
+.item-product-payment .price-product-payment{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.quantity-pay{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.item-product-payment img{
+    height: 100px;
+}
+.check-total{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+.check-total span{
+    font-size: 1.8rem;
+}
+.check-total button{
+    width: 100px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.payment-methods{
+    margin: 0 auto;
+    display: flex;
+}
+.payment-methods span{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.payment-methods div{
+    display: flex;
+    margin: 0 10px;
+}
+.payment-methods input, label{
+    margin: 0 5px;
+    font-size: 1.6rem;
+}

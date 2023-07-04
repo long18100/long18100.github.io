@@ -34,19 +34,8 @@
                 <li class="nav_item" data-target="shop-tab">SHOP</li>
                 <li class="nav_item" data-target="customer-review">OUR CUSTOMER</li>
                 <li class="nav_item" data-target="box-cart">
-                    <!-- <i class="fa-solid fa-cart-shopping"></i> -->
                     🛒
                     <span class="count-product-added quantity" ">0</span>
-                    <!-- <div class="box-cart-added">
-                        <div class="heading-cart">New products added</div>
-                        <ul class="list-product-added">
-                            
-                        </ul>
-                        <div class="go-to-cart">
-                            <span><b class="count-product-added">0</b> Products</span>
-                            <button id="btn-go-to-cart"> Go to cart</button>
-                        </div>
-                    </div> -->
                 </li>
             </ul>
         </nav>
@@ -299,7 +288,7 @@
             </div>
         </section>
     </div>
-    <!-- II. THÔNG TIN VỀ NIKE-->
+    <!-- II. THÔNG TIN VỀ DOANH NGHIỆP-->
     <div class="main" id="aboutUs">
         <!-- 1.VIDEO GIỚI THIỆU NIKE -->
         <div class="box-about-us">
@@ -412,7 +401,7 @@
             <div id="list-products"></div>
         </div>
     </div>
-    <!-- IV. CỘNG TÁC VỚI NIKE -->
+    <!-- IV. CỘNG TÁC VỚI DOANH NGHIỆP QUẢN CÁO -->
     <div class="main" id="customer-review">
         <div class="slider-customer">
             <div class="list-customer">
@@ -480,6 +469,34 @@
                 <button class="buy-now">BUY NOW</button>
             </div>
         </div>
+        <div class="box-payment">
+            <div class="header-payment">
+                <div class="heading-pay">
+                    <img src="/images/logo/Logo_NIKE.svg" alt="">
+                    <h1>Pay</h1>
+                </div>
+                <button class="back" ><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <input class="address" type="text" placeholder="Your Address">
+            <ul class="payment-list">
+
+            </ul>
+            <div class="check-total">
+                <span>Total payment (<b class="count-product-added">0</b> products): <b class="total-payment">0</b> VND</span>
+                <div class="payment-methods">
+                    <div>
+                        <input type="radio" name="fav_language" value="Payment on delivery">
+                        <label for="html">Payment on delivery</label><br>
+                    </div>
+                    <div>
+                        <input type="radio" name="fav_language" value="Nike Wallet">
+                        <label for="css">Nike's Wallet</label><br>
+                    </div>
+                    
+                </div>
+                <button class="order">ORDER</button>
+            </div>
+        </div>
     </div>
 
     <!-- FOOTER -->
@@ -527,8 +544,15 @@
             <span>© 2023 Nike, Inc. All Rights Reserved</span>
         </div> 
     </footer>
+    <!-- TOAST NOTIFICATIONS  -->
     <a href="#" class="to_top center-flex"><i class="fa-solid fa-angles-up"></i></a>
-    <a href="#" class="reload"></a>
+    <div class="ntf ntf_empty center-flex">
+        <h1>Cart is empty !</h1>
+    </div>
+    <div class="ntf order-ss center-flex">
+        <h1>Order Success !</h1>
+    </div>
+
     <!-- Javasript -->
     <script src="/javascript/sliders.js"></script>
     <script src="/javascript/navTabs.js"></script>

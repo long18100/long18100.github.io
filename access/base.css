@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
+    /* border: 1px solid #000000; */
 }
 html{
     scroll-behavior: smooth;
@@ -81,4 +82,24 @@ input{ border: none; outline: none;}
     color: #8c8c8c;
     opacity: 0;
     transition: all .5s ease-in-out;
+}
+.ntf{
+    width: 400px;
+    height: 100px;
+    color: var(--white-color);
+    position: fixed;
+    top: 80px;
+    right: 0;
+    /* border-radius: 10% 10% 0% 35% / 0% 0% 10% 100% ; */
+    border-radius: 20px 0 0 20px;
+    z-index: 99999999999999999;
+    transform: translateX(100%);
+    transition: .5s ease-in-out;
+}
+.ntf_empty{
+    background-color: #ff9100;
+}
+.order-ss{
+    background-color: #001aff;
+    z-index: 999999999999999999;
 }

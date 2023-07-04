@@ -1,7 +1,4 @@
 // FILTER
-let list = document.getElementById('list-products');
-let filter = document.querySelector('.filter');
-let count = document.getElementById('count-product');
 let listProducts = [
     {
         id: 1,
@@ -364,6 +361,9 @@ let listProducts = [
         }
     }
 ];
+let list = document.getElementById('list-products');
+let filter = document.querySelector('.filter');
+let count = document.getElementById('count-product');
 let productFilter = listProducts;
 showProduct(productFilter);
 filter.addEventListener('submit', function (event) {
@@ -382,7 +382,6 @@ filter.addEventListener('submit', function (event) {
             }
         }
         console.log(valueFilter.typeProduct.value)
-        
         // check name
         if (valueFilter.name.value != '') {
             if (!item.name.includes(valueFilter.name.value)) {
@@ -412,7 +411,6 @@ function showProduct(productFilter) {
     productFilter.forEach((item, key) => {
         let newItem = document.createElement('div');
         newItem.classList.add('item-product');
-
         //create image
         let newImage = new Image();
         newImage.src = item.image;
@@ -442,9 +440,11 @@ function showProduct(productFilter) {
 
 // ADD TO CART
 let listCard = document.querySelector('.list-product-cart');
-let total = document.querySelector('.total-payment');
+let total = document.querySelectorAll('.total-payment');
 let quantity = document.querySelectorAll('.count-product-added');
 let bg_emptyCart = document.querySelector('.list-product-cart img')
+let checkQuantity = document.querySelectorAll(".check-quantity")
+let buy = document.querySelector('.buy-now')
 let listCards  = [];
 let listCardMinis = []
 function addToCard(key){
@@ -467,6 +467,7 @@ function reloadCard(key){
             newDiv.classList.add('item-product-cart');
             newDiv.setAttribute('data-key', key);
             newDiv.innerHTML = `
+                <input class="check-quantity" type="checkbox" name="" id="">
                 <div><img src="${value.image}"/></div>
                 <h1>${value.name}</h1>
                 <div class="box-changeQuantity">
@@ -487,11 +488,14 @@ function reloadCard(key){
         listCard.style.height =  'auto';
         listCard.style.background = 'none'
     }
-    total.innerText = totalPrice.toLocaleString();
+    //total.innerText = totalPrice.toLocaleString();
     quantity.forEach((value) => {
         value.innerText = count;
     })
-}
+    total.forEach((value) => {
+        value.innerText = totalPrice.toLocaleString();
+    })
+};
 function removeFromCart(key){
     delete listCards[key];
     reloadCard(key);
@@ -504,4 +508,59 @@ function changeQuantity(key, quantity){
         listCards[key].price = quantity * productFilter[key].price;
     }
     reloadCard();
+}
+let footer = document.querySelector('footer');
+let back = document.querySelector('.back');
+let emptyCart = document.querySelector('.ntf_empty')
+let orderSS = document.querySelector('.order-ss')
+let order = document.querySelector('.order');
+let boxPay = document.querySelector('.box-payment')
+let listPay = document.querySelector('.payment-list')
+buy.onclick = function(){
+    const checkListCard = listCards.every((elements, index) => {
+        return elements === undefined;
+    });
+    if(listCards.length === 0 || checkListCard){
+        setTimeout(() => {emptyCart.style.transform = 'translateX(100%)'}, 2000)
+        emptyCart.style.transform = 'translateX(0)'
+        listPay = null;
+    }else{
+        boxPay.style.display = 'block';
+        listCard.style.display = 'none'
+        footer.style.display = 'none'
+        renderPayment()
+    }
+}
+order.onclick = function(){
+    boxPay.style.display = 'none';
+    setTimeout(() => {orderSS.style.transform = 'translateX(100%)'}, 2000)
+    orderSS.style.transform = 'translateX(0)'
+    listCards.forEach((value, key) => {
+        removeFromCart(key)
+    })
+    listCard.style.display = 'block'
+    footer.style.display = 'block'
+    listPay = null
+}
+back.onclick = function(){
+    boxPay.style.display = 'none';
+    listPay = null;
+    listCard.style.display = 'block'
+    footer.style.display = 'block'
+}
+function renderPayment(){
+    listCards.forEach((value, key)=>{
+        let newDiv = document.createElement('li');
+            newDiv.classList.add('item-product-payment');
+            newDiv.innerHTML = `
+                <img src="${value.image}"/>
+                <h1>${value.name}</h1>
+                <div class="quantity-pay">
+                    <span>Quantity</span>
+                    <div class="count">${value.quantity}</div>
+                </div>
+                <span class="price-product-payment">${value.price.toLocaleString()} VND</span>
+                `;
+            listPay.appendChild(newDiv);
+    })
 }

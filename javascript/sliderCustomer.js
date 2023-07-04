@@ -5,7 +5,6 @@ let right = document.getElementById('right');
 let dot = document.querySelectorAll('li.dot-item');
 let active = 0;
 let lengthItem = item.length - 1;
-//let autoSlides = setInterval(() => {right.click()}, 5000)
 let auto = setInterval(() => {right.click()}, 5000)
 right.onclick = function(){
     if(active + 1 > item.length){
