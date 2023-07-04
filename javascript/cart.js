@@ -439,6 +439,7 @@ function showProduct(productFilter) {
 
 
 // ADD TO CART
+let cart = document.querySelector('.cart');
 let listCard = document.querySelector('.list-product-cart');
 let total = document.querySelectorAll('.total-payment');
 let quantity = document.querySelectorAll('.count-product-added');
@@ -526,7 +527,7 @@ buy.onclick = function(){
         listPay = null;
     }else{
         boxPay.style.display = 'block';
-        listCard.style.display = 'none'
+        cart.style.display = 'none'
         footer.style.display = 'none'
         renderPayment()
     }
@@ -538,14 +539,14 @@ order.onclick = function(){
     listCards.forEach((value, key) => {
         removeFromCart(key)
     })
-    listCard.style.display = 'block'
+    cart.style.display = 'block'
     footer.style.display = 'block'
-    listPay = null
+    listPay = null;
 }
 back.onclick = function(){
     boxPay.style.display = 'none';
     listPay = null;
-    listCard.style.display = 'block'
+    cart.style.display = 'block'
     footer.style.display = 'block'
 }
 function renderPayment(){
